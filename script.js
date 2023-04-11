@@ -3,12 +3,14 @@ const redButton = document.getElementById('red-button');
 const container = document.querySelector('.container');
 
 greenButton.addEventListener('click', (event) => {
+	  container.classList.remove('red');
   container.classList.add('green');
     event.stopPropagation();
 
 });
 
 redButton.addEventListener('click', (event) => {
+	  container.classList.remove('green');
   container.classList.add('red');
     event.stopPropagation();
 

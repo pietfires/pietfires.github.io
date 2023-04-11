@@ -2,12 +2,16 @@ const greenButton = document.getElementById('green-button');
 const redButton = document.getElementById('red-button');
 const container = document.querySelector('.container');
 
-greenButton.addEventListener('click', () => {
+greenButton.addEventListener('click', (event) => {
   container.classList.add('green');
+    event.stopPropagation();
+
 });
 
-redButton.addEventListener('click', () => {
+redButton.addEventListener('click', (event) => {
   container.classList.add('red');
+    event.stopPropagation();
+
 });
 
 container.addEventListener('click', () => {
